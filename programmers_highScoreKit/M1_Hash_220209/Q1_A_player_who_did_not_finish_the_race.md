@@ -82,9 +82,9 @@ class Solution {
 
 ## 민성호
 
-> [선수 이름 : 사람 수] 구조의 HashMap을 만들어서
-> praticipant 배열을 순회하면서 해시맵에 추가 (있으면 value+=1)
-> completion 배열을 순회하면서 해시맵 값 변경 (value-=1)
+> [선수 이름 : 사람 수] 구조의 HashMap을 만들어서  
+> praticipant 배열을 순회하면서 해시맵에 추가 (있으면 value+=1)  
+> completion 배열을 순회하면서 해시맵 값 변경 (value-=1)  
 > 마지막에 map을 돌면서 value가 0이 아닌 사람 찾아서 반환
 
 ```java

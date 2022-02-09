@@ -67,11 +67,11 @@ face에 해당하는 의상이 crow_mask, blue_sunglasses, smoky_makeup이므로
 
 ## 권지민
 
-> 해시 문제
-> 의상의 종류 : key 의상의 갯수 : value
-> 같은 key가 이미 있는 경우, 해당 key의 value값을 카운트해준다.
-> a : 2  b : 1  c : 1 인 경우
-> a1 a2 b c a1b a2b a1c a2c a1bc a2bc bc
+> 해시 문제  
+> 의상의 종류 : key 의상의 갯수 : value  
+> 같은 key가 이미 있는 경우, 해당 key의 value값을 카운트해준다.  
+> a : 2  b : 1  c : 1 인 경우.  
+> a1 a2 b c a1b a2b a1c a2c a1bc a2bc bc.  
 > a는 a1, a2 0(안입음) b는 b 0 c는 c 0 이기 때문에 3 * 2 * 2 - 1(아무것도 안입는것)이다.
 
 ```java
@@ -117,11 +117,11 @@ class Solution {
 
 ## 민성호
 
-> [옷 종류 : [옷 이름] HashSet ] HashMap을 만든다
-> 인자로 받은 clothes 배열을 돌면서
-> HashMap에 넣는다
-> 종류 별로 옷이 몇 개 인지 세서 (각 c1, c2, c3, c4 ...개)
-> 계산한다 (c1+1) * (c2+1) * (c3+1) ... * (cn+1) -1
+> [옷 종류 : [옷 이름] HashSet ] HashMap을 만든다  
+> 인자로 받은 clothes 배열을 돌면서.  
+> HashMap에 넣는다.  
+> 종류 별로 옷이 몇 개 인지 세서 (각 c1, c2, c3, c4 ...개).  
+> 계산한다 (c1+1) * (c2+1) * (c3+1) ... * (cn+1) -1   
 
 ```java
 import java.util.*;
