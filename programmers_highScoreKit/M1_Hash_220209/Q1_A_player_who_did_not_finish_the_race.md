@@ -44,8 +44,8 @@
 
 ## 권지민
 
-> participant와 completion 둘 다 정렬
-> 정렬된 두 배열을 비교하면서 틀린 경우 해당 참가자를 반환.
+> participant와 completion 둘 다 정렬  
+> 정렬된 두 배열을 비교하면서 틀린 경우 해당 참가자를 반환.  
 > completion을 다 돌고도 없다면 맨 마지막 선수가 완주하지 못한 선수에 해당하므로 마지막 participant 반환
 
 ```java
