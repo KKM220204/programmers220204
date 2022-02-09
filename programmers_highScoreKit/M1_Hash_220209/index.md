@@ -1,4 +1,4 @@
-# 해시 [문제 보기](https://programmers.co.kr/learn/courses/30/parts/12077)
+# 해시
 
 ## 1. [완주하지 못한 선수](https://github.com/algorithm220204/programmers220204/blob/main/programmers_highScoreKit/M1_Hash_220209/Q1_A_player_who_did_not_finish_the_race.md) (Level 1)
 
