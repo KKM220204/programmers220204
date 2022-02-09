@@ -2,8 +2,8 @@
 
 권지민, 김성용, 민성호
 
-주 2회 회의
-저녁 7시 30분
+주 2회 회의  
+저녁 7시 30분  
 회의록은 번갈아
 
 ## 프로그래머스 고득점 Kit [문제 보기(프로그래머스)](https://programmers.co.kr/learn/challenges) :chart_with_upwards_trend:
