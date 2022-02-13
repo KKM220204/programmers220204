@@ -33,11 +33,25 @@
 
 ## 권지민
 
-> 대충 설명  
-> 대충 설명2
+> 현재 prices[i]와 비교하는 prices[j]의 간극을 재어 return하면 된다.  
+> 단 바로 다음 주식에서 가격이 떨어지더라도 위의 예처럼 1초간은 가격이 떨어지지 않았으니 해당 부분만 유의하여 풀이하면 된다.
 
 ```java
-
+class Solution {
+    public int[] solution(int[] prices) {
+        int len = prices.length;
+        int[] answer = new int[len];
+        int i, j;
+        for (i = 0; i < len; i++) {
+            for (j = i + 1; j < len; j++) {
+                answer[i]++;
+                if (prices[i] > prices[j])
+                    break;
+            }
+        }
+        return answer;
+    }
+}
 ```
 
   
@@ -55,10 +69,37 @@
 
 ## 민성호
 
-> 대충 설명  
-> 대충 설명2
+> 오르고 있는 가격을 체크할 자료구조와 며칠 올랐는 지를 반환할 자료구조를 만든다.  
+> 반복문을 돌면서 새 값을 rising에 넣고, 기존의 값이 내려갔다면 rising에서 뺀다
+> rising에 있는 index로 반환할 자료구조의 값들(처음에는 0)을 1씩 더한다
 
 ```java
+import java.util.*;
 
+class Solution {
+    public int[] solution(int[] prices) {
+        int[] ret = new int[prices.length];
+        
+        ArrayList<Integer> rising = new ArrayList<>();
+        ArrayList<Integer> removal = new ArrayList<>();
+
+        for(int i=0; i<prices.length; i++){
+            for(Integer n : rising) {
+                if (prices[n.intValue()] <= prices[i]) {
+                    ret[n]+=1;
+                } else {
+                    ret[n]+=1;
+                    removal.add(n);
+                }
+            }
+            for(Integer n : removal) {
+                rising.remove(n);
+            }
+            removal.clear();
+            rising.add(i);
+        }
+        return ret;
+    }
+}
 ```
 

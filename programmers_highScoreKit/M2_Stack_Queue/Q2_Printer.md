@@ -49,11 +49,55 @@
 
 ## 권지민
 
-> 대충 설명  
-> 대충 설명2
+> 프린터.   
+> 문서의 우선순위에 따라 큐 뒤에 배치할 일이 생기기 때문에 문서의 순서를 알기 위해.   
+> 큐에는 문서의 index값으로 집어넣는다.
+>
+> 1. peek()함수를 통해 대기목록 가장 앞 문서를 꺼내온다.
+> 2. findMax()함수를 이용하여 현재 문서가 가장 중요도가 높지 않다면 다시 해당 큐 마지막에 집어넣는다 (add)
+> 3. 가장 중요도가 높을 경우 ArrayList에 집어넣는다.
+>
+> 해당 로직을 큐가 전부 비워질때까지 진행한 후, 반환값에 ArrayList값을 넣어 제출한다.
 
 ```java
-
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+class Solution {
+    public boolean findMax(Queue<Integer> queue, int[] p) {
+        Queue<Integer> temp = new LinkedList<>();;
+        temp.addAll(queue);
+        int max = p[temp.poll()];
+        while(temp.isEmpty() != true) {
+            if (p[temp.peek()] > max) 
+                return false;
+            temp.poll();
+        }
+        return true;
+    }
+    public int solution(int[] priorities, int location) {
+        int answer = 0;
+        ArrayList<Integer> index = new ArrayList<>();
+        Queue<Integer> queue = new LinkedList<>();
+        
+        for (int i = 0; i < priorities.length; i++) {
+            queue.add(i);
+        }
+        
+        while(queue.isEmpty() != true) {
+            if (findMax(queue, priorities) == true)
+                index.add(queue.poll());
+            else {
+                queue.add(queue.poll()); 
+            }
+        }
+        for (int i = 0; i < index.size(); i++) {
+            if (location == index.get(i))
+                answer = i + 1;
+        }
+        return answer;
+    }
+}
 ```
 
   
@@ -71,10 +115,48 @@
 
 ## 민성호
 
-> 대충 설명  
-> 대충 설명2
+> 우선 순위와 인덱스를 각각 자료구조를 만들어 저장한다.   
+> 가장 앞에 있는 자료의 우선 순위가 max이면 제거한다.  
+> 아니라면 자료구조의 제일 뒤로 넣는다.  
+> 제거하는 경우, 제거할 자료가 찾고 있는 자료이면 그 인덱스를 반환한다.  
 
 ```java
+import java.util.*;
 
+class Solution {
+    public int solution(int[] priorities, int location) {
+        Deque<Integer> idx = new ArrayDeque<>();
+        Deque<Integer> prior = new ArrayDeque<>();
+
+        for(int i=0; i<priorities.length; i++) {
+            idx.addLast(i);
+            prior.addLast(priorities[i]);
+        }
+
+        int cnt=0;
+        while(true){
+            if(isMax(prior,prior.peekFirst())){
+                cnt++;
+                int n=idx.getFirst();
+                if(n==location) return cnt;
+                idx.removeFirst();
+                prior.removeFirst();
+            } else {
+                idx.addLast(idx.removeFirst());
+                prior.addLast(prior.removeFirst());
+            }
+        }
+    }
+
+    public boolean isMax(Deque<Integer> dq, int val) {
+        int max=0;
+        for(Integer n : dq) {
+            if (n > max) {
+                max=n;
+            }
+        }
+        return val==max;
+    }
+}
 ```
 

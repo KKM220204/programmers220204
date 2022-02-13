@@ -46,11 +46,47 @@
 
 ## 권지민
 
-> 대충 설명  
-> 대충 설명2
+> 주식가격.   
+> 매일 각 progresses에 담긴 작업에 speeds만큼 작업량을 올려준다.  
+> que의 맨 앞에 있는 작업량이 100이상일 때, 해당 작업을 포함하여 연달아 작업량을 완수한게 있다면 poll로 뽑아낸다.  
+> ex) 예제를 보면 7일 째 작업량은 [100, 240, 90] 이므로 1번 째, 두번 째 배포한 후, 2일 후 3번 째 작업을 배포한다.
 
 ```java
-
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+class Solution {
+    public int[] solution(int[] progresses, int[] speeds) {
+        int complete;
+        int days = 1;
+        ArrayList<Integer> array = new ArrayList<>();
+        Queue<Integer> que = new LinkedList<>();
+        Queue<Integer> spd = new LinkedList<>();
+        
+        for (int i = 0; i < progresses.length; i++)
+            que.add(progresses[i]);
+        for (int i = 0; i < speeds.length; i++)
+            spd.add(speeds[i]);
+        
+        while (!que.isEmpty()) {
+            complete = 0;
+            if (que.peek() + spd.peek() * days  >= 100) {
+                while(!que.isEmpty() && que.peek() + spd.peek() * days >= 100) {
+                    complete++;
+                    que.poll();
+                    spd.poll();
+                }
+                array.add(complete);
+            }
+            days++;
+        }
+        int[] answer = new int[array.size()];
+        for (int i = 0; i < array.size(); i++) {
+            answer[i] = array.get(i);
+        }
+        return answer;
+    }
+}
 ```
 
   
@@ -68,10 +104,53 @@
 
 ## 민성호
 
-> 대충 설명  
-> 대충 설명2
+> 진척도와 스피드를 저장하는 자료구조를 만든다
+> 매일 진척도에 스피드를 더한다
+> 만약 가장 앞 자료의 진척도가 100이상이면,
+> 가장 앞에서부터 연속적으로 100 이상인 자료들을 모두 제거한다
+> 제거한 날짜들을 배열에 저장했다가, 반환한다
 
 ```java
+import java.util.*;
 
+class Solution {
+    public int[] solution(int[] progresses, int[] speeds) {
+        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> speed = new ArrayList<>();
+        ArrayList<Integer> ret = new ArrayList<>();
+        
+        for (int n : progresses) {
+            list.add(n);
+        }
+        for (int n : speeds) {
+            speed.add(n);
+        }
+        boolean check=false;
+        while (list.size()>0) {
+            int cnt = 0;
+            while (list.size()>0 && list.get(0) >= 100){
+                list.remove(0);
+                speed.remove(0);
+                cnt++;
+                check=true;
+            }
+            if(check){
+                ret.add(cnt);
+                check=false;
+            }
+            
+            for(int i=0; i<list.size(); i++) {
+                list.set(i,list.get(i)+speed.get(i));
+            }
+        }
+        int[] retArr = new int[ret.size()];
+        int i=0;
+        for (Integer n : ret) {
+            retArr[i]=n;
+            i++;
+        }
+        return retArr;
+    }
+}
 ```
 
