@@ -105,10 +105,24 @@ class Solution {
 
 ## 김성용
 
-> 대충 설명
+> 아무 의상을 착용하지 않는 경우 하나를 빼고 전부 계산해야함.  
+> 의상의 종류별로 들어온 갯수를 dict로 센 다음 dict 순회하며 반복문 이용해 계산
 
 ```python
-대충 코드
+def solution(clothes):
+    clothes_dict = dict()
+    
+    for clothe in clothes:
+        if clothe[1] in clothes_dict:
+            clothes_dict[clothe[1]] += 1
+        else:
+            clothes_dict[clothe[1]] = 1
+    
+    answer = 1
+    for i in clothes_dict.values():
+        answer *= (i + 1)
+        
+    return answer - 1
 ```
 
 

@@ -138,10 +138,53 @@ class Solution {
 
 ## 김성용
 
-> 대충 설명
+> 문제 조건에 맞게 반환값을 구하기 위해 play_info에 dict형태로 저장.  
+> play_info에 저장된 데이터는 다음과 같다.  
+> { key = 장르이름,    
+>   value = [ 해당 장르의 play시간들의 합, { key = 노래의 고유번호 i,  
+>                                                                    value = 플레이시간(plays[i]) } ]. 
+>
+> 반복문으로 genres, plays에 들어있는 데이터를 play_info에 모두 저장후.  
+> 문제 조건에 맞게 play_info를 '해당 장르의 play시간들의 합'의 내림차순으로 정렬.  
+> 각각의 장르에서 노래의 { key = 노래의 고유번호 i, value = 플레이시간(plays[i]) }을 플레이시간의 내림차순으로 정렬.  
+> album에 재생시간 합산이 높은 장르부터 가장 많이 재생된 노래 두곡을 append 해준후 return.  
+>
+> 이때 장르별로 제일 플레이가 많이 된 노래 2개씩만 앨범에 수록하면 되므로,  
+> plays의 데이터를 play_info에 저장할때 제일 플레이가 많이 된 노래 2개를 찾아 같이 저장해놓도록 로직을 고친다면, 마지막에 genre_info별로 play_time을 sort할 필요가 없어지므로 속도가 빨라질 것이다.  
+> 하지만 지금도 충분히 속도가 빠르며 위와같은 방법으로 하면 코드가 좀 지저분해질거같아 일단 이런방식으로 풀어두었다.
 
 ```python
-대충 코드
+def solution(genres, plays):
+
+    import operator
+
+    play_info = dict()
+    album = list()
+
+    for i in range(len(genres)):
+        if genres[i] in play_info:
+            play_info[genres[i]][0] += plays[i]
+            play_info[genres[i]][1][i] = plays[i]
+        else:
+            play_info[genres[i]] = list()
+            play_info[genres[i]].insert(0, plays[i])
+            play_info[genres[i]].insert(1, {i: plays[i]})
+
+    play_info = sorted(play_info.items(),
+                       key=operator.itemgetter(1),
+                       reverse=True)
+
+    for genre_info in play_info:
+        play_time = genre_info[1][1]
+        play_time = sorted(play_time.items(),
+                           key=operator.itemgetter(1),
+                           reverse=True)
+
+        album.append(play_time[0][0])
+        if len(play_time) > 1:
+            album.append(play_time[1][0])
+
+    return album
 ```
 
 

@@ -1,4 +1,4 @@
-# 완주하지 못한 선수
+# 	완주하지 못한 선수
 
 
 
@@ -72,10 +72,35 @@ class Solution {
 
 ## 김성용
 
-> 대충 설명
+> participant 인자들중 completion인자에 없는 이름을 반환.  
+> hash를 이용해 이름하나 찾을때 O(1), participant만큼 찾으므로 O(N) X O(1) = O(N)의 시간복잡도.   
+>
+> completion원소들을 hash 이용해 검색하기 위해 completion_dict에 넣어줌.  
+> 반복문으로 participant의 인자들을 completion_dict에서 검색, 없으면 반환
 
 ```python
-대충 코드
+def solution(participant, completion):
+    completion_dict = {}
+    
+    for name in completion:
+        n = completion_dict.get(name)
+        if n == None:
+            n = 1
+        else:
+            n = n + 1
+        completion_dict.update({name : n})
+
+    #suppose that result is only one person
+    for name in participant:
+        n = completion_dict.get(name) 
+        if n == None:
+            return name
+        elif n == 1:
+            completion_dict.pop(name, 0)
+        else:
+            completion_dict.update({name : n - 1})
+
+    return ''
 ```
 
   

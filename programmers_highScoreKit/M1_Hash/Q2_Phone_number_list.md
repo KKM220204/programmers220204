@@ -85,10 +85,22 @@ class Solution {
 
 ## 김성용
 
-> 대충 설명
+> 주석에 나와있듯이 문제 조건에서 하나라도 접두사가 붙어있다면 false 반환해야함,  
+> 이를 효율적으로 이용하기 위해 사전순 정렬 후 바로 뒤의 인자에 prefix(접두사)로 붙는지 확인.  
+> 맨처음에 전화번호의 길이순서대로 정렬( sorted(..., key=len) ) 했다가 시간초과, 위에서 말한 조건때문에 그럴필요 없음
 
 ```python
-대충 코드
+def solution(phoneBook):
+    #fails if only one number starts with other number
+    #so don't need to sort by length of numbers
+    #counting length of each number takes O(N), results in time out
+    phoneBook = sorted(phoneBook)
+
+    for prefix, number in zip(phoneBook, phoneBook[1:]):
+        if number.startswith(prefix):
+            return False
+
+    return True
 ```
 
 
