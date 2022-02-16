@@ -14,5 +14,5 @@
 
 ### 3회 [힙(Heap) 20220216(수)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M3_Heap/index.md) 출제 빈도:arrow_right:  평균 점수:arrow_up:
 
-### 4회 [힙(Heap) 202202??(?)](#) 출제 빈도 :arrow_up: 평균 점수:arrow_up:
+### 4회 [정렬 202202??(?)](#) 출제 빈도 :arrow_up: 평균 점수:arrow_up:
 
