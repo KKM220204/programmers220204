@@ -1,4 +1,4 @@
-# 스택/큐
+# 정렬
 
 ## 1. [K번 째 수](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M4_Sort/M1_Kth_number.md) (Level 1)
 
