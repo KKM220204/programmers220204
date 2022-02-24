@@ -16,7 +16,7 @@
 
 ### 4회 [정렬 220218(금)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M4_Sort/index.md) 출제 빈도 :arrow_up: 평균 점수:arrow_up:
 
-### 5회 [완전 탐색 220222(화)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M4_Sort/index.md) 출제 빈도 :arrow_up: 평균 점수:arrow_down:
+### 5회 [완전 탐색 220222(화)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M5_Brute_force/index.md) 출제 빈도 :arrow_up: 평균 점수:arrow_down:
 
 ### 6회 [그리드 2202??(?)](#) 출제 빈도:arrow_down: 평균 점수:arrow_down:
 
