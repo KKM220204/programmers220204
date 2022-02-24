@@ -10,10 +10,13 @@
 
 ### 1회 [해시 220209(수)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M1_Hash/index.md) 출제 빈도:arrow_up:  평균 점수:arrow_up:
 
-### 2회 [스택/큐 20220213(일)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M2_Stack_Queue/index.md) 출제 빈도:arrow_right:  평균 점수:arrow_up:
+### 2회 [스택/큐 220213(일)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M2_Stack_Queue/index.md) 출제 빈도:arrow_right:  평균 점수:arrow_up:
 
-### 3회 [힙(Heap) 20220216(수)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M3_Heap/index.md) 출제 빈도:arrow_right:  평균 점수:arrow_up:
+### 3회 [힙(Heap) 220216(수)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M3_Heap/index.md) 출제 빈도:arrow_right:  평균 점수:arrow_up:
 
-### 4회 [정렬 20220218(금)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M4_Sort/index.md) 출제 빈도 :arrow_up: 평균 점수:arrow_up:
+### 4회 [정렬 220218(금)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M4_Sort/index.md) 출제 빈도 :arrow_up: 평균 점수:arrow_up:
 
-### 5회 [완전 탐색 2022????(?)](#) 출제 빈도 :arrow_up: 평균 점수:arrow_down:
+### 5회 [완전 탐색 220222(화)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M4_Sort/index.md) 출제 빈도 :arrow_up: 평균 점수:arrow_down:
+
+### 6회 [그리드 2202??(?)](#) 출제 빈도:arrow_down: 평균 점수:arrow_down:
+

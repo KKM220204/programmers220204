@@ -1,10 +1,8 @@
-# 스택/큐
+# 완전탐색
 
-## 1. [기능 개발](#) (Level 2)
+## 1. [모의고사](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M5_Brute_force/Q1_mock_test.md) (Level 1)
 
-## 2. [프린터](#) (Level 2)
+## 2. [소수 찾기](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M5_Brute_force/Q2_find_the_prime_number.md) (Level 2)
 
-## 3. [다리를 지나는 트럭](#) (Level 2)
-
-## 4. [주식가격](#) (Level 2)
+## 3. [카펫](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M5_Brute_force/Q3_carpet.md) (Level 2)
 
