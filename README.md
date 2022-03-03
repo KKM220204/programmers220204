@@ -20,3 +20,5 @@
 
 ### 6회 [그리드 220227(일)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M6_Greedy/index.md) 출제 빈도:arrow_down: 평균 점수:arrow_down:
 
+### 7회 [동적 계획법 (Dynamic Programming) 220303(목)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M7_Dynamic_Programming/index.md) 출제 빈도:arrow_down: 평균 점수:arrow_down:
+
