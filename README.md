@@ -18,5 +18,5 @@
 
 ### 5회 [완전 탐색 220222(화)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M5_Brute_force/index.md) 출제 빈도 :arrow_up: 평균 점수:arrow_down:
 
-### 6회 [그리드 2202??(?)](#) 출제 빈도:arrow_down: 평균 점수:arrow_down:
+### 6회 [그리드 220227(일)](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M6_Greedy/index.md) 출제 빈도:arrow_down: 평균 점수:arrow_down:
 
