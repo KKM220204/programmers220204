@@ -1,4 +1,4 @@
-# 스택/큐
+# 탐욕법 (Greedy)
 
 ## 1. [체육복](https://github.com/KKM220204/programmers220204/blob/main/programmers_highScoreKit/M6_Greedy/Q1_workout_clothes.md) (Level 1)
 
